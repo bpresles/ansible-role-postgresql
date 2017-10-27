@@ -15,12 +15,6 @@
 - include: initialize.yml
 - include: configure.yml
 
-- name: Ensure PostgreSQL is started and enabled on boot.
-  service:
-    name: "{{ postgresql_daemon }}"
-    state: started
-    enabled: yes
-
 # Configure PostgreSQL.
 - include: databases.yml
 - include: users.yml
